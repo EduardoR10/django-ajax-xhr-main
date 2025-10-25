@@ -21,6 +21,7 @@
         <h2>POST</h2>
       </div>
       <form id="addTodoForm">
+        {% csrf_token %}
         <div class="mb-3">
           <label for="todoTaskPost">Task</label>
           <input type="text" class="form-control" id="todoTaskPost" placeholder="Task" required>
@@ -42,6 +43,7 @@
         <h2>PUT</h2>
       </div>
       <form id="updateTodoForm">
+        {% csrf_token %}
         <div class="mb-3">
           <label for="todoIdPut">ID</label>
           <input type="number" class="form-control" id="todoIdPut" placeholder="Todo ID">
@@ -63,6 +65,7 @@
         <h2>DELETE</h2>
       </div>
       <form id="deleteTodoForm">
+        {% csrf_token %}
         <div class="mb-3">
           <label for="todoIdDelete">ID</label>
           <input type="number" class="form-control" id="todoIdDelete" placeholder="Todo ID">
